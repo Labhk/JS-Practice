@@ -5,8 +5,8 @@
 1. Write a JavaScript program to display the current day and time in the following format.  
 Sample Output : Today is : Tuesday.
 
-<pre>
-```javascript
+
+```js
 let today = new Date();
 let day = today.getDate();
 let hours = (today.getHours() % 12) || 12;
@@ -21,12 +21,12 @@ let AM_PM = today.getHours() < 12 ? "AM" : "PM";
 
 console.log(`Current Time - ${hours}:${minutes}:${sec} ${AM_PM}`);
 ```
-</pre>
+
 
 
 ### Output
->Today's Day - Friday
-Current Time - 7 : 01 : 53 PM
+`Today's Day - Friday                                
+Current Time - 7 : 01 : 53 PM`
 
 1. Write a JavaScript program to display the current day and time in the following format.  
 Sample Output : Today is : Tuesday.
