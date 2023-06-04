@@ -33,7 +33,7 @@ Current Time - 7 : 01 : 53 PM
 2. Write a JavaScript program to find the area of a triangle where three sides are given.  
 
 
-```
+```js
 const readline = require('readline-sync');
 
 let side1, side2, side3;
