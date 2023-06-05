@@ -222,7 +222,46 @@ Replaced String:  KbwbTdsjqu!qsphsbn
 ```
 <br/>
 
-3.  
+8. Write a JavaScript program to capitalize the first letter of each word in a given string. 
+
+
+```js
+let str = "quick brown fox jumps over the lazy dog";
+console.log("String: ", str);
+
+let words = str.split(' ');
+
+for (let i = 0; i < words.length; i++) {
+  words[i] = words[i].replace(words[i][0], words[i][0].toUpperCase());
+}
+
+//const capitalized = str.split(' ').map(word => word.charAt(0).toUpperCase() + word.slice(1)).join(' ');
+
+console.log("Capitalized String: ", words.join(' '));
+
+```
+
+### Ouptut
+```
+String:  quick brown fox jumps over the lazy dog
+Capitalized String:  Quick Brown Fox Jumps Over The Lazy Dog
+```
+<br/>
+
+9.  
+
+
+```js
+
+```
+
+### Ouptut
+```
+
+```
+<br/>
+
+10.  
 
 
 ```js
