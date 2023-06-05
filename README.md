@@ -29,7 +29,7 @@ console.log(`Current Time - ${hours}:${minutes}:${sec} ${AM_PM}`);
 Today's Day - Friday
 Current Time - 7 : 01 : 53 PM
 ```
-
+<br/>
 
 
 2. Write a JavaScript program to find the area of a triangle where three sides are given.  
@@ -70,7 +70,7 @@ Enter value of side2: 20
 Enter value of side3: 27
 Area of Triangle using Heron's formula: 224.50 square units
 ```
-
+<br/>
 
 3. Write a JavaScript program to determine whether a year is a leap year in the Gregorian calendar for a range of years.  
 
@@ -106,3 +106,131 @@ Enter end of year range : 2028
 2027 - Not
 2028 - Leap Year
 ```
+<br/>
+
+4. Write a JS program to calculate the days left before Christmas.  
+
+
+```js
+let today = new Date();
+let christmas = new Date(today.getFullYear(), 11, 25); 
+let oneDay = 24 * 60 * 60 * 1000; 
+
+let daysLeft = Math.ceil((christmas - today) / oneDay);
+
+console.log("Days left for Christmas:", daysLeft);
+```
+
+### Ouptut
+```
+Days left for christmas :  173
+```
+<br/>
+
+5. Write a JS program to remove a character at the specified position in a given string and return the modified string.  
+
+
+```js
+const readline = require('readline-sync');
+
+let str = "JavaScript program";
+console.log("String : ",str)
+let position = Number(readline.question("Enter index number of character : "))
+
+let charArray = str.split('')
+
+if (position >= 0 && position < charArray.length){
+  charArray.splice(position,1); 
+
+console.log("Modified String : ",charArray.join(''))
+
+} else {
+  console.log("Invalid position")
+}
+```
+
+### Ouptut
+```
+String :  JavaScript program
+Enter index number of character : 11
+Modified String :  JavaScript rogram
+```
+<br/>
+
+6. Write a JS program to create a new string from a given string by 
+1) first character of the given string added to the front and back.
+2) changing the position of the first and last characters.
+   The string length must be broader than or equal to 1.  
+
+
+```js
+const readline = require('readline-sync');
+let str = "JavaScript program";
+console.log("String: ", str);
+
+//console.log("Modified String : ", str.slice(str.length-3) + str + str.slice(str.length-3));
+
+if (str.length >= 1) {
+  let charArray = str.split('');
+
+  charArray.push(charArray[0]);
+  charArray.unshift(charArray[charArray.length - 1]);
+
+  console.log("Modified String (Part 1): ", charArray.join(''));
+
+  charArray = str.split('');
+  charArray.pop();
+  charArray.push(str[0]);
+  charArray.shift();
+  charArray.unshift(str[str.length - 1]);
+
+  console.log("Modified String (Part 2) : ", charArray.join(''));
+} else {
+  console.log("String length must be greater than or equal to 1.");
+}
+```
+
+### Ouptut
+```
+String:  JavaScript program
+Modified String (Part 1):  JJavaScript programJ
+Modified String (Part 2) :  mavaScript prograJ
+```
+<br/>
+
+7. Write a JavaScript program to replace every character in a given string with the character following it in the alphabet.
+
+
+```js
+const readline = require('readline-sync');
+let str = "JavaScript program";
+console.log("String: ", str);
+
+for (let i = 0; i < str.length; i++) {
+
+  const charCode = str.charCodeAt(i);
+  str = str.replace(str[i], String.fromCharCode(charCode+1));
+}
+
+console.log("Replaced String: ", str);
+```
+
+### Ouptut
+```
+String:  JavaScript program
+Replaced String:  KbwbTdsjqu!qsphsbn
+```
+<br/>
+
+3.  
+
+
+```js
+
+```
+
+### Ouptut
+```
+
+```
+<br/>
